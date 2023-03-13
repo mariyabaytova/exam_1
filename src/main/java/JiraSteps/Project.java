@@ -14,10 +14,6 @@ public class Project {
         sleep(3000);
         testProjectsClick.click();
         name.click();
-
-        // String s = name.getText();
-        // Assert.assertEquals(name.getText(), s);
-
         taskClick.click();
         searchClick.click();
 

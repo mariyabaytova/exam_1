@@ -10,7 +10,6 @@ import static JiraSteps.Bug.BugStep;
 import static JiraSteps.Project.ProjectStep;
 import static JiraSteps.Task.checkTask;
 
-//@FixMethodOrder(MethodSorters.NAME_ASCENDING)
 public class RunTest extends WebHooks {
 
     @Test

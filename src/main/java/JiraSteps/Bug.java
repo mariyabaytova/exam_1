@@ -1,19 +1,15 @@
 package JiraSteps;
 
-import com.codeborne.selenide.Condition;
 import io.qameta.allure.Step;
 import org.junit.Assert;
 
-import java.time.Duration;
-
-import static JiraElements.Authorization.*;
 import static JiraElements.Bug.*;
 import static JiraElements.Project.*;
 import static java.lang.Thread.sleep;
 
 public class Bug {
     @Step("Создание дефекта")
-    public static void BugStep () throws InterruptedException {
+    public static void BugStep() throws InterruptedException {
 
         projectsClick.click();
         testProjectsClick.click();
@@ -36,15 +32,13 @@ public class Bug {
         sleep(2000);
         MyTasks.click();
         sleep(2000);
-        // Num.click();
         sleep(3000);
-        //  InProzess.click();
         BusinessProz.click();
         sleep(3000);
-        //sleep(6000);
         Done.click();
 
     }
+
     @Step("Проерка закрытия дефекта")
     public static void BugCheck() {
 

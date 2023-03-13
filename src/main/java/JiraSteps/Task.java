@@ -1,7 +1,6 @@
 package JiraSteps;
 
 import io.qameta.allure.Step;
-import io.restassured.internal.common.assertion.Assertion;
 import org.junit.Assert;
 
 import static JiraElements.TaskElements.*;

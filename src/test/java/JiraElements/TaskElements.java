@@ -10,4 +10,3 @@ public class TaskElements {
     public static SelenideElement status1 = $x("//span[@id='status-val']/span");
     public static SelenideElement version1 = $x("//a[@title='Version 2.0 ']").as("Привязанная версия");
 }
-

@@ -1,7 +1,7 @@
 package Tests;
 
 import Hooks.WebHooks;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.DisplayName;
 
 import static JiraSteps.Authorization.Check;
@@ -10,17 +10,18 @@ import static JiraSteps.Bug.BugStep;
 import static JiraSteps.Project.ProjectStep;
 import static JiraSteps.Task.checkTask;
 
+
 public class RunTest extends WebHooks {
 
     @Test
     @DisplayName("Проверка автризации")
-    public void AuthorizationTest() throws InterruptedException {
+    public void AuthorizationTest() {
         Check();
     }
 
     @DisplayName("Проверка задач в проекте")
     @Test
-    public void ProjectTest() throws InterruptedException {
+    public void ProjectTest() {
         ProjectStep();
     }
 
@@ -32,7 +33,7 @@ public class RunTest extends WebHooks {
 
     @DisplayName("Открытие дефекта и Проерка закрытия дефекта")
     @Test
-    public void BugTest() throws InterruptedException {
+    public void BugTest() {
         BugStep();
         BugCheck();
 

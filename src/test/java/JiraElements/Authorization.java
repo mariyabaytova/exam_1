@@ -5,7 +5,6 @@ import com.codeborne.selenide.SelenideElement;
 import static com.codeborne.selenide.Selenide.$x;
 
 public class Authorization {
-
     public static SelenideElement loginInput = $x("//input[@name='os_username']").as("Ввод логина");
     public static SelenideElement passwordInput = $x("//input[@name='os_password']").as("Ввод пароля");
     public static SelenideElement rememberMe = $x("//label[@for='login-form-remember-me']").as("Запомнить меня");

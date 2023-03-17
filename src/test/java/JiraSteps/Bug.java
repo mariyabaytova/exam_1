@@ -1,15 +1,14 @@
 package JiraSteps;
 
 import io.qameta.allure.Step;
-import org.junit.Assert;
+import org.junit.jupiter.api.Assertions;
 
 import static JiraElements.Bug.*;
 import static JiraElements.Project.*;
-import static java.lang.Thread.sleep;
 
 public class Bug {
     @Step("Создание дефекта")
-    public static void BugStep() throws InterruptedException {
+    public static void BugStep() {
 
         projectsClick.click();
         testProjectsClick.click();
@@ -23,27 +22,20 @@ public class Bug {
         VersionCorrect.click();
         ClickArrow.click();
         ClickArrow.sendKeys("Метка");
-        sleep(2000);
         createBug.click();
-        sleep(2000);
         taskClick.click();
-        sleep(2000);
         searchClick.click();
-        sleep(2000);
         MyTasks.click();
-        sleep(2000);
-        sleep(3000);
         BusinessProz.click();
-        sleep(3000);
         Done.click();
 
     }
 
-    @Step("Проерка закрытия дефекта")
+    @Step("Проверка закрытия дефекта")
     public static void BugCheck() {
 
         String d = Dones.getText();
-        Assert.assertEquals("ГОТОВО", d);
+        Assertions.assertEquals("ГОТОВО", d);
 
     }
 }

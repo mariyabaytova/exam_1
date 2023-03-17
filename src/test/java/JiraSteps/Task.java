@@ -1,7 +1,7 @@
 package JiraSteps;
 
 import io.qameta.allure.Step;
-import org.junit.Assert;
+import org.junit.jupiter.api.Assertions;
 
 import static JiraElements.TaskElements.*;
 
@@ -15,10 +15,9 @@ public class Task {
         search1.click();
 
         String v = version1.getText();
-        Assert.assertEquals("Version 2.0", v);
+        Assertions.assertEquals("Version 2.0", v);
 
-       String sss = status1.getText();
-        Assert.assertEquals("ГОТОВО", sss);
+        String sss = status1.getText();
+        Assertions.assertEquals("ГОТОВО", sss);
     }
 }
-
